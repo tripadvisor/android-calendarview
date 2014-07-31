@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calendar</string>
+    <string name="invalid_date">Date must be between %1$s and %2$s.</string>
+    <string name="month_name_format">MMM</string>
+    <string name="header_month_name_format">MMMM yyyy</string>
+    <string name="divider_content_description">Divider Image</string>
+</resources>

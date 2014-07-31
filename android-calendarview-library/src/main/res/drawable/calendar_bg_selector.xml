@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2012 Square, Inc. -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:state_selected="true" app:state_current_month="false" app:state_range_open="true" android:drawable="@drawable/calendar_inactive_selected_day_single_cell_first_bg"/>
+    <item android:state_selected="true" app:state_current_month="true" app:state_range_open="true" android:drawable="@drawable/calendar_selected_day_single_cell_first_bg"/>
+    <item app:state_range_first="true" app:state_current_month="true" android:drawable="@drawable/calendar_selected_day_first_bg"/>
+    <item app:state_range_last="true" app:state_current_month="true" android:drawable="@drawable/calendar_selected_day_last_bg"/>
+    <item app:state_range_middle="true" app:state_current_month="true" android:drawable="@drawable/calendar_selected_day_middle_bg"/>
+    <item app:state_range_first="true" app:state_current_month="false" android:drawable="@drawable/calendar_selected_day_first_bg"/>
+    <item app:state_range_last="true" app:state_current_month="false" android:drawable="@drawable/calendar_selected_day_last_bg"/>
+    <item app:state_range_middle="true" app:state_current_month="false" android:drawable="@drawable/calendar_selected_day_middle_bg"/>
+    <item android:state_pressed="true" app:state_current_month="true" android:drawable="@drawable/calendar_selected_day_bg"/>
+    <item android:state_selected="true" app:state_current_month="false" android:drawable="@drawable/calendar_inactive_selected_day_bg"/>
+    <item android:state_pressed="true" app:state_current_month="false" android:drawable="@drawable/calendar_inactive_selected_day_bg"/>
+    <item android:state_selected="true" app:state_range_first_and_last="true" android:drawable="@drawable/calendar_selected_day_bg"/>
+    <item android:state_selected="true" app:state_current_month="true" android:drawable="@drawable/calendar_selected_day_bg"/>
+    <item app:state_current_month="false">
+        <color android:color="@color/calendar_inactive_month_bg"/>
+    </item>
+    <item app:state_highlighted="true">
+        <color android:color="@color/calendar_highlighted_day_bg"/>
+    </item>
+    <item app:state_today="true" android:drawable="@drawable/calendar_current_day_bg"/>
+    <item>
+        <color android:color="@color/calendar_active_month_bg"/>
+    </item>
+</selector>

@@ -1,0 +1,36 @@
+<resources>
+
+    <style name="MyTheme" parent="android:Theme.Light">
+        <item name="android:actionBarStyle">@style/MyTheme.ActionBarStyle</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Flightstheme</item>
+        <item name="android:actionBarTabTextStyle">@style/MyActionBarTabText</item>
+    </style>
+
+    <style name="MyTheme.ActionBarStyle" parent="android:Widget.ActionBar">
+        <item name="android:titleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
+        <item name="android:background">@drawable/action_bar_bg</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_flightstheme</item>
+        <item name="android:divider">@android:color/transparent</item>
+    </style>
+
+    <style name="MyTheme.ActionBar.TitleTextStyle" parent="android:TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Flightstheme" parent="android:Widget.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_flightstheme</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_flightstheme</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_flightstheme</item>
+        <item name="android:actionModeSplitBackground">
+            @drawable/cab_background_bottom_flightstheme
+        </item>
+    </style>
+
+    <!-- ActionBar tabs text styles -->
+    <style name="MyActionBarTabText"
+           parent="android:Widget.Holo.ActionBar.TabText">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+</resources>

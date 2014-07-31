@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/* Copyright 2010, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License")
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:configChanges="orientation"
+              android:fillViewport="true"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/cv_month_name"
+        style="@style/CalendarTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"/>
+
+    <View
+        android:id="@+id/cv_month_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/calendar_month_divider_height"
+        android:background="@color/calendar_month_divider"
+        android:gravity="fill_horizontal"
+        android:scaleType="fitXY"/>
+
+    <LinearLayout
+        android:id="@+id/cv_day_names"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minHeight="36dip"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="gone"/>
+
+        <TextView
+            style="@style/CalendarDayHeader"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <TextView
+            style="@style/CalendarDayHeader"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <TextView
+            style="@style/CalendarDayHeader"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <TextView
+            style="@style/CalendarDayHeader"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <TextView
+            style="@style/CalendarDayHeader"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <TextView
+            style="@style/CalendarDayHeader"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <TextView
+            style="@style/CalendarDayHeader"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:drawSelectorOnTop="false"
+            android:overScrollMode="never"/>
+
+        <ImageView
+            android:id="@+id/cv_divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/calendar_week_bg_shadow"
+            android:gravity="fill_horizontal"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/divider_content_description"/>
+
+    </FrameLayout>
+
+</LinearLayout>

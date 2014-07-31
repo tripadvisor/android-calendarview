@@ -1,0 +1,20 @@
+<resources>
+    <!-- Framework styleables are not public. -->
+    <declare-styleable name="TextAppearanceCompatStyleable">
+        <attr name="android:textSize"/>
+    </declare-styleable>
+
+    <declare-styleable name="calendar_cell">
+        <attr name="state_selectable" format="boolean"/>
+        <attr name="state_current_month" format="boolean"/>
+        <attr name="state_focused_month" format="boolean"/>
+        <attr name="state_today" format="boolean"/>
+        <attr name="state_range_first" format="boolean"/>
+        <attr name="state_range_middle" format="boolean"/>
+        <attr name="state_range_last" format="boolean"/>
+        <attr name="state_range_first_and_last" format="boolean"/>
+        <attr name="state_range_open" format="boolean"/>
+        <attr name="state_highlighted" format="boolean"/>
+    </declare-styleable>
+
+</resources>
