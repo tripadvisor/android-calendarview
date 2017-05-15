@@ -1,31 +1,18 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:0.12.+'
-    }
-}
-
 apply plugin: 'com.android.application'
 
-repositories {
-    mavenCentral()
-}
-
 android {
-    compileSdkVersion 19
-    buildToolsVersion '19.1.0'
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 19
+        minSdkVersion 17
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "com.google.android.apps.common.testing.testrunner.GoogleInstrumentationTestRunner"
     }
     buildTypes {
         release {
-            runProguard false
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
@@ -33,12 +20,13 @@ android {
         abortOnError false
         disable 'GradleDependency', 'OldTargetApi'
     }
+    productFlavors {
+    }
 }
 
 dependencies {
     compile project(':android-calendarview-library')
     androidTestCompile 'com.ibm.icu:icu4j:53.1'
-    androidTestCompile 'com.android.support:support-v4:19.+'
-    androidTestCompile 'com.squareup:fest-android:1.0.7+'
     androidTestCompile files('libs/espresso-1.1-bundled.jar')
+    androidTestCompile 'com.squareup:fest-android:1.0.7+'
 }
