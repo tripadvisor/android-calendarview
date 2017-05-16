@@ -6,10 +6,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.tripadvisor.R;
-import com.tripadvisor.WeekView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +23,7 @@ public class MonthAdapter extends RecyclerView.Adapter<MonthAdapter.MonthViewHol
     static class MonthViewHolder extends RecyclerView.ViewHolder{
 
         private TextView mMonthName;
-        private List<WeekView> mWeeks;
+        private List<LinearLayout> mWeeks;
         private List<CalendarCellView> mDays;
 
         MonthViewHolder(View convertView){
@@ -36,16 +36,16 @@ public class MonthAdapter extends RecyclerView.Adapter<MonthAdapter.MonthViewHol
         }
 
         private void initWeeks(View convertView){
-            this.mWeeks.add((WeekView)convertView.findViewById(R.id.week1));
-            this.mWeeks.add((WeekView)convertView.findViewById(R.id.week2));
-            this.mWeeks.add((WeekView)convertView.findViewById(R.id.week3));
-            this.mWeeks.add((WeekView)convertView.findViewById(R.id.week4));
-            this.mWeeks.add((WeekView)convertView.findViewById(R.id.week5));
-            this.mWeeks.add((WeekView)convertView.findViewById(R.id.week6));
+            this.mWeeks.add((LinearLayout) convertView.findViewById(R.id.week1));
+            this.mWeeks.add((LinearLayout) convertView.findViewById(R.id.week2));
+            this.mWeeks.add((LinearLayout) convertView.findViewById(R.id.week3));
+            this.mWeeks.add((LinearLayout) convertView.findViewById(R.id.week4));
+            this.mWeeks.add((LinearLayout) convertView.findViewById(R.id.week5));
+            this.mWeeks.add((LinearLayout) convertView.findViewById(R.id.week6));
         }
 
         private void initDaysWeek(){
-            for (WeekView view : mWeeks) {
+            for (LinearLayout view : mWeeks) {
                 this.mDays.add((CalendarCellView)view.findViewById(R.id.day_1));
                 this.mDays.add((CalendarCellView)view.findViewById(R.id.day_2));
                 this.mDays.add((CalendarCellView)view.findViewById(R.id.day_3));
@@ -88,7 +88,7 @@ public class MonthAdapter extends RecyclerView.Adapter<MonthAdapter.MonthViewHol
     }
 
     private void initDaysOfMonth(MonthViewHolder holder, MonthDescriptor descriptor){
-        for(WeekView weekView : holder.mWeeks){
+        for(LinearLayout weekView : holder.mWeeks){
             weekView.setVisibility(View.VISIBLE);
         }
 

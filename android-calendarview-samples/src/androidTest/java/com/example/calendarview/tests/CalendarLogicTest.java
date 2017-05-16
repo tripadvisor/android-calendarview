@@ -7,7 +7,6 @@ import android.widget.TextView;
 
 import com.example.calendarview.R;
 import com.example.calendarview.TestActivity;
-import com.oyorooms.DateStateDescriptor;
 import com.tripadvisor.CalendarView;
 
 import java.util.ArrayList;
@@ -318,11 +317,6 @@ public class CalendarLogicTest extends ActivityInstrumentationTestCase2<TestActi
         Calendar jumpToCal = Calendar.getInstance(locale);
         jumpToCal.setTime(today.getTime());
         jumpToCal.add(DATE, 1);
-        DateStateDescriptor cellToClick =
-                new DateStateDescriptor(jumpToCal.getTime(), true, true, true, true, true, 0,
-                        DateStateDescriptor.RangeState.NONE);
-        view.getListener().handleClick(cellToClick);
-
         assertThat(view.getSelectedCals().get(0).get(DATE)).isEqualTo(jumpToCal.get(DATE));
     }
 

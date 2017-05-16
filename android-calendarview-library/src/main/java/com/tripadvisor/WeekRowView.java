@@ -40,7 +40,7 @@ public class WeekRowView extends RelativeLayout {
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
-        mWeekView = (WeekView) findViewById(R.id.week_view);
+        //mWeekView = (WeekView) findViewById(R.id.week_view);
 //        mHeaderView = (CalendarRowView) findViewById(R.id.header);
 //        mFooterView = (CalendarRowView) findViewById(R.id.footer);
     }
