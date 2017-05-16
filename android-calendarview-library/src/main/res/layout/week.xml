@@ -5,7 +5,7 @@
     <com.tripadvisor.CalendarRowView
         android:layout_width="match_parent"
         android:layout_height="16dp"
-        android:background="@color/calendar_selected_day_bg"
+        android:background="@color/colorPrimary"
         android:paddingBottom="@dimen/calendar_day_headers_paddingbottom"
         >
         <TextView
@@ -53,7 +53,7 @@
     <com.tripadvisor.CalendarRowView
         android:layout_width="match_parent"
         android:layout_height="16dp"
-        android:background="@color/calendar_selected_day_bg"
+        android:background="@color/colorPrimary"
         android:paddingBottom="@dimen/calendar_day_headers_paddingbottom"
         >
         <TextView

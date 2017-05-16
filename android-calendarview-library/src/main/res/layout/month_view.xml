@@ -1,0 +1,136 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:configChanges="orientation"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/week_vertical_margin_medium">
+
+    <TextView
+        android:id="@+id/cv_month_name"
+        style="@style/CalendarTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:id="@+id/cv_day_names"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minHeight="36dip"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/CalendarDayHeader"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/monday" />
+
+        <TextView
+            style="@style/CalendarDayHeader"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/tuesday" />
+
+        <TextView
+            style="@style/CalendarDayHeader"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/wednesday" />
+
+        <TextView
+            style="@style/CalendarDayHeader"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/thursday" />
+
+        <TextView
+            style="@style/CalendarDayHeader"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/friday" />
+
+        <TextView
+            style="@style/CalendarDayHeader"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/saturday" />
+
+        <TextView
+            style="@style/CalendarDayHeader"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/sunday" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_weeks_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/week1"
+            layout="@layout/week_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/week2"
+            layout="@layout/week_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/week3"
+            layout="@layout/week_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/week4"
+            layout="@layout/week_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/week5"
+            layout="@layout/week_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/week6"
+            layout="@layout/week_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/cv_month_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/calendar_month_divider_height"
+        android:background="@color/calendar_month_divider"
+        android:gravity="fill_horizontal"
+        android:scaleType="fitXY"
+        android:layout_marginTop="@dimen/week_vertical_margin_medium"/>
+
+</LinearLayout>
