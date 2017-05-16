@@ -8,7 +8,6 @@ import android.widget.TextView;
 import com.example.calendarview.R;
 import com.example.calendarview.TestActivity;
 import com.tripadvisor.CalendarView;
-import com.tripadvisor.WeekCellDescriptor;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -318,11 +317,6 @@ public class CalendarLogicTest extends ActivityInstrumentationTestCase2<TestActi
         Calendar jumpToCal = Calendar.getInstance(locale);
         jumpToCal.setTime(today.getTime());
         jumpToCal.add(DATE, 1);
-        WeekCellDescriptor cellToClick =
-                new WeekCellDescriptor(jumpToCal.getTime(), true, true, true, true, true, 0,
-                        WeekCellDescriptor.RangeState.NONE);
-        view.getListener().handleClick(cellToClick);
-
         assertThat(view.getSelectedCals().get(0).get(DATE)).isEqualTo(jumpToCal.get(DATE));
     }
 

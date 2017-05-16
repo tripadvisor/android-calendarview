@@ -1,17 +1,15 @@
 package com.tripadvisor;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.util.AttributeSet;
-import android.view.LayoutInflater;
-import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.oyorooms.DateStateDescriptor;
 
 import java.util.Calendar;
 import java.util.List;
 
-import static android.content.res.Resources.NotFoundException;
 import static com.tripadvisor.WeekView.Listener;
 
 /**
@@ -31,24 +29,24 @@ public class WeekRowView extends RelativeLayout {
         super(context, attrs);
     }
 
-    public static WeekRowView create(ViewGroup parent, LayoutInflater inflater,
-                                     Listener listener) {
-        final WeekRowView view = (WeekRowView) inflater.inflate(R.layout.week_row_view, parent,
-                false);
-        view.mListener = listener;
-        return view;
-    }
+//    public static WeekRowView create(ViewGroup parent, LayoutInflater inflater,
+//                                     Listener listener) {
+//        final WeekRowView view = (WeekRowView) inflater.inflate(R.layout.week_row_view, parent,
+//                false);
+//        view.mListener = listener;
+//        return view;
+//    }
 
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
-        mWeekView = (WeekView) findViewById(R.id.week_view);
-        mHeaderView = (CalendarRowView) findViewById(R.id.header);
-        mFooterView = (CalendarRowView) findViewById(R.id.footer);
+        //mWeekView = (WeekView) findViewById(R.id.week_view);
+//        mHeaderView = (CalendarRowView) findViewById(R.id.header);
+//        mFooterView = (CalendarRowView) findViewById(R.id.footer);
     }
 
     @SuppressWarnings("ConstantConditions")
-    public void init(final WeekDescriptor weekDescriptor, final List<WeekCellDescriptor> cells,
+    public void init(final WeekDescriptor weekDescriptor, final List<DateStateDescriptor> cells,
                      final boolean displayOnly, final int focusedMonth) {
         mWeekDescriptor = weekDescriptor;
         mMonthOfFirstWeekDay = weekDescriptor.getMonth();
@@ -58,32 +56,32 @@ public class WeekRowView extends RelativeLayout {
         mLastWeekDayMonth = mWeekView.getMonthOfLastWeekDay();
     }
 
-    private void initHeader(List<WeekCellDescriptor> cells, int focusedMonth) {
+    private void initHeader(List<DateStateDescriptor> cells, int focusedMonth) {
         for (int i = 0; i < cells.size(); i++) {
-            WeekCellDescriptor cell = cells.get(i);
+            DateStateDescriptor cell = cells.get(i);
             final TextView headerTextView = (TextView) mHeaderView.getChildAt(i);
             final TextView footerTextView = (TextView) mFooterView.getChildAt(i);
 
-            if (cell.isFirstDayOfTheMonth()) {
-                headerTextView.setText(cell.getMonth());
-            } else {
-                headerTextView.setText("");
-            }
-            int backgroundColor = Color.WHITE;
-            try {
-                if (cell.getDate().getMonth() == focusedMonth) {
-                    backgroundColor = getResources().getColor(R.color
-                            .calendar_active_month_bg);
-                } else {
-                    backgroundColor = getResources().getColor(R.color
-                            .calendar_inactive_month_bg);
-                }
-            } catch (NotFoundException e) {
-                Logr.d("Color Not Found:" + e.getLocalizedMessage());
-            } finally {
-                headerTextView.setBackgroundColor(backgroundColor);
-                footerTextView.setBackgroundColor(backgroundColor);
-            }
+//            if (cell.isFirstDayOfTheMonth()) {
+//                headerTextView.setText(cell.getMonth());
+//            } else {
+//                headerTextView.setText("");
+//            }
+//            int backgroundColor = Color.WHITE;
+//            try {
+//                if (cell.getDate().getMonth() == focusedMonth) {
+//                    backgroundColor = getResources().getColor(R.color
+//                            .calendar_active_month_bg);
+//                } else {
+//                    backgroundColor = getResources().getColor(R.color
+//                            .colorInactiveMonthBG);
+//                }
+//            } catch (NotFoundException e) {
+//                Logr.d("Color Not Found:" + e.getLocalizedMessage());
+//            } finally {
+//                headerTextView.setBackgroundColor(backgroundColor);
+//                footerTextView.setBackgroundColor(backgroundColor);
+//            }
         }
     }
 

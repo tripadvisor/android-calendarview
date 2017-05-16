@@ -1,44 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.tripadvisor.WeekView xmlns:android="http://schemas.android.com/apk/res/android"
-                                   android:layout_width="match_parent"
-                                   android:layout_height="wrap_content"
-                                   android:layout_marginLeft="8dp"
-                                   android:layout_marginRight="8dp">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center">
 
-    <com.tripadvisor.CalendarCellView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <com.oyorooms.CalendarCellView
+        android:id="@+id/day_1"
         style="@style/CalendarCell.CalendarDate"
-        />
-    <com.tripadvisor.CalendarCellView
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        style="@style/CalendarCell.CalendarDate"
-        />
-    <com.tripadvisor.CalendarCellView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/CalendarCell.CalendarDate"
-        />
-    <com.tripadvisor.CalendarCellView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/CalendarCell.CalendarDate"
-        />
-    <com.tripadvisor.CalendarCellView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/CalendarCell.CalendarDate"
-        />
-    <com.tripadvisor.CalendarCellView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/CalendarCell.CalendarDate"
-        />
-    <com.tripadvisor.CalendarCellView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/CalendarCell.CalendarDate"
-        />
+        android:layout_weight="1"
+        android:gravity="center" />
 
-</com.tripadvisor.WeekView>
+    <com.oyorooms.CalendarCellView
+        android:id="@+id/day_2"
+        style="@style/CalendarCell.CalendarDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center" />
+
+    <com.oyorooms.CalendarCellView
+        android:id="@+id/day_3"
+        style="@style/CalendarCell.CalendarDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center" />
+
+    <com.oyorooms.CalendarCellView
+        android:id="@+id/day_4"
+        style="@style/CalendarCell.CalendarDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center" />
+
+    <com.oyorooms.CalendarCellView
+        android:id="@+id/day_5"
+        style="@style/CalendarCell.CalendarDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center" />
+
+    <com.oyorooms.CalendarCellView
+        android:id="@+id/day_6"
+        style="@style/CalendarCell.CalendarDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center" />
+
+    <com.oyorooms.CalendarCellView
+        android:id="@+id/day_7"
+        style="@style/CalendarCell.CalendarDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center" />
+
+</LinearLayout>

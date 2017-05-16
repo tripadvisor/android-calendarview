@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-
+    <string name="monday"> M </string>
+    <string name="tuesday"> T </string>
+    <string name="wednesday"> W </string>
+    <string name="thursday"> T </string>
+    <string name="friday"> F </string>
+    <string name="saturday"> S </string>
+    <string name="sunday"> S </string>
 </resources>
